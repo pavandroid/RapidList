@@ -26,15 +26,15 @@ public class RecyclerViewModel {
         linearLayoutManager = new LinearLayoutManager(mContext);
         ((LinearLayoutManager)linearLayoutManager).setOrientation(LinearLayoutManager.VERTICAL);
 
-        arrayList.add(new RapidRowModel1(BR.row1, "Am from Row#1 A"));
-        arrayList.add(new RapidRowModel2(BR.row2, "Am from Row#2 A"));
-        arrayList.add(new RapidRowModel3(BR.row3, "Am from Row#3 A"));
-        arrayList.add(new RapidRowModel1(BR.row1, "Am from Row#1 B"));
-        arrayList.add(new RapidRowModel2(BR.row2, "Am from Row#2 B"));
-        arrayList.add(new RapidRowModel3(BR.row3, "Am from Row#3 B"));
-        arrayList.add(new RapidRowModel1(BR.row1, "Am from Row#1 C"));
-        arrayList.add(new RapidRowModel2(BR.row2, "Am from Row#2 C"));
-        arrayList.add(new RapidRowModel3(BR.row3, "Am from Row#3 C"));
+        arrayList.add(new RapidRowModel1(BR.row1, "Am from Row @Left #1 A"));
+        arrayList.add(new RapidRowModel2(BR.row2, "Am from Row @Right #2 A"));
+        arrayList.add(new RapidRowModel3(BR.row3, "Am from Row @Center #3 A"));
+        arrayList.add(new RapidRowModel1(BR.row1, "Am from Row @Left #1 B"));
+        arrayList.add(new RapidRowModel2(BR.row2, "Am from Row @Right #2 B"));
+        arrayList.add(new RapidRowModel3(BR.row3, "Am from Row @Center #3 B"));
+        arrayList.add(new RapidRowModel1(BR.row1, "Am from Row @Left #1 C"));
+        arrayList.add(new RapidRowModel2(BR.row2, "Am from Row @Right #2 C"));
+        arrayList.add(new RapidRowModel3(BR.row3, "Am from Row @Center #3 C"));
 
         layoutsHashMap.put(BR.row1, R.layout.layout_row_1);
         layoutsHashMap.put(BR.row2, R.layout.layout_row_2);
