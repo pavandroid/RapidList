@@ -1,4 +1,5 @@
-###Rapidlist Library
+# Rapidlist Library
+
 Get rid of Adapters. Remove unnecessary boilerplate code in the names of Adapters. Used BindView for setting up the values. Library can handle multiple row types.
  - No more adapters
  - No View Holders
@@ -9,10 +10,11 @@ Get rid of Adapters. Remove unnecessary boilerplate code in the names of Adapter
  - Your Model class of AeeayList is enough to create RecyclerView
  - Used Data Binding which is supported by lated Android SDK.
 
-###Screenshot
+# Library Screenshot
+
 ![](https://raw.githubusercontent.com/pavandroid/RapidList/master/screenshots/Capture.JPG)
 
 > Sample Recyclerlist created.
 
-##How to integrate the library
+# How to integrate the library
 
