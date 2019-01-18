@@ -98,7 +98,7 @@ Create a model object where you will maintain an arraylist of any objects which 
 </layout>
    ```
    
-### Step3:
+##
 You are all set to run the application.
 # Library Screenshot
 
