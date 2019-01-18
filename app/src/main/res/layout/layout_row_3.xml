@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="row3"
+            type="com.uvr.rapidlist.model.RapidRowModel3" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:text="@{row3.name}"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+</layout>

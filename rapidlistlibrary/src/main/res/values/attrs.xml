@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="RapidRecyclerView">
+        <attr name="contentArray" format="reference"/>
+        <attr name="rowLayouts" format="reference"/>
+    </declare-styleable>
+</resources>

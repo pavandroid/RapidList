@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="recyclerViewModel"
+            type="com.uvr.rapidlist.model.RecyclerViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.uvr.rapidlist.MainActivity">
+
+        <com.uvr.rapidlistlibrary.recycler.RapidRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@{recyclerViewModel.linearLayoutManager}"
+            app:contentArray="@{recyclerViewModel.arrayList}"
+            app:rowLayouts="@{recyclerViewModel.layoutsHashMap}" />
+
+    </LinearLayout>
+</layout>
