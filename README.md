@@ -4,12 +4,12 @@ Get rid of Adapters. Remove unnecessary boilerplate code in the names of Adapter
  - No more adapters
  - No View Holders
  - No setAdapters or notifyAdapters
- - No RecyclerList object required in Java/Kotlin
+ - No RecyclerList object required in Java/Kotlin Activity or Fragments.
  - Supports multiple row types
  - Create listview in less than 5 minutes
  - Operative from XML layouts
- - Your Model class of AeeayList is enough to create RecyclerView
- - Used Data Binding which is supported by lated Android SDK.
+ - Your Model class of ArrayList is enough to create RecyclerView
+ - Used Data Binding which is supported by latest Android SDK.
  - Works with LiveData
  - Lot more fun by avoiding boiler plate code and improve productivity.
 
