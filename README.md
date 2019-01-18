@@ -106,4 +106,6 @@ You are all set to run the application.
 
 > Sample Recyclerlist created.
 
+## Contributors
 
+Thanks goes to Vinay 
