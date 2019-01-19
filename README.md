@@ -108,4 +108,5 @@ You are all set to run the application.
 
 ## Contributors
 
-Thanks goes to Vinay 
+Thanks goes to Vinay Yamusani  https://github.com/bitfield66
+
