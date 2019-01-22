@@ -22,6 +22,24 @@ dataBinding{
         enabled = true
     }
 ```
+
+Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Add the dependency
+```
+	dependencies {
+	        implementation 'com.github.pavandroid:RapidList:9d015849b9'
+	}
+```
+
 ### Step2:
 Create a model object where you will maintain an arraylist of any objects which you usually pass to RecyclerView Adapter. Make sure to maintain the Arraylist in the below manner for library to understand the Row information, types and layouts. check link https://github.com/pavandroid/RapidList/blob/master/app/src/main/java/com/uvr/rapidlist/model/RecyclerViewModel.java for more information on Model object creation. You can also create LiveData where the Listview automatically updated with live data changes.
 ```Java
@@ -105,6 +123,10 @@ You are all set to run the application.
 ![](https://raw.githubusercontent.com/pavandroid/RapidList/master/screenshots/Capture.JPG)
 
 > Sample Recyclerlist created.
+
+[![](https://jitpack.io/v/pavandroid/RapidList.svg)](https://jitpack.io/#pavandroid/RapidList)
+
+
 
 ## Contributors
 
