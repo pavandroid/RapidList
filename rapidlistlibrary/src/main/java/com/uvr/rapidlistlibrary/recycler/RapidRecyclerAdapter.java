@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.uvr.rapidlistlibrary.interfaces.OnRapidListRowSelected;
-import com.uvr.rapidlistlibrary.model.RapidRowData;
+import com.uvr.rapidlistlibrary.model.RowInfo;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,20 +19,20 @@ import java.util.List;
 
 public class RapidRecyclerAdapter extends RecyclerView.Adapter<RapidRecyclerAdapter.RapidViewHolder> {
 
-    private final List<RapidRowData> mValues;
-    private HashMap<Integer, Integer> layoutsHashmap;
+    private final List mValues;
+    private HashMap<Class, RowInfo> layoutsHashmap;
     private OnRapidListRowSelected listener;
 
-    public RapidRecyclerAdapter(List<RapidRowData> items) {
+    public RapidRecyclerAdapter(List items) {
         mValues = items;
     }
 
-    public RapidRecyclerAdapter(List<RapidRowData> items, HashMap<Integer, Integer> layoutsHashmap) {
+    public RapidRecyclerAdapter(List items, HashMap<Class, RowInfo> layoutsHashmap) {
         mValues = items;
         this.layoutsHashmap = layoutsHashmap;
     }
 
-    public RapidRecyclerAdapter(List<RapidRowData> items, HashMap<Integer, Integer> layoutsHashmap, OnRapidListRowSelected listener) {
+    public RapidRecyclerAdapter(List items, HashMap<Class, RowInfo> layoutsHashmap, OnRapidListRowSelected listener) {
         mValues = items;
         this.layoutsHashmap = layoutsHashmap;
         this.listener = listener;
@@ -40,19 +40,22 @@ public class RapidRecyclerAdapter extends RecyclerView.Adapter<RapidRecyclerAdap
 
     @Override
     public RapidViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), layoutsHashmap.get(viewType), parent, false);
+        ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), viewType, parent, false);
         return new RapidViewHolder(binding);
     }
 
     @Override
     public int getItemViewType(int position) {
-        RapidRowData data = mValues.get(position);
-        return data.ROW_TYPE;
+        Object o = mValues.get(position);
+        RowInfo info = layoutsHashmap.get(o.getClass());
+        return info.getLayoutId();
     }
 
     @Override
     public void onBindViewHolder(RapidViewHolder holder, final int position) {
-        holder.binding.setVariable(mValues.get(position).ROW_TYPE, mValues.get(position));
+        Object object = mValues.get(position);
+        RowInfo info = layoutsHashmap.get(object.getClass());
+        holder.binding.setVariable(info.getRowType(), object);
         holder.binding.executePendingBindings();
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

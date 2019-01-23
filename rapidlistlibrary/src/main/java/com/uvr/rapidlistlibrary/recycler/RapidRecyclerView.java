@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 
+import com.uvr.rapidlistlibrary.model.RowInfo;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -17,7 +19,7 @@ public class RapidRecyclerView extends RecyclerView {
 
     private ArrayList arrayList;
     private Context mContext;
-    private HashMap<Integer, Integer> layoutsHashMap;
+    private HashMap<Class, RowInfo> layoutsHashMap;
 
     public RapidRecyclerView(Context context) {
         super(context);
