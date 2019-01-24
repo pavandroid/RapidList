@@ -36,7 +36,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 ```
 	dependencies {
-	        implementation 'com.github.pavandroid:RapidList:9d015849b9'
+	        implementation 'com.github.pavandroid:RapidList:master-SNAPSHOT'
 	}
 ```
 
@@ -45,9 +45,9 @@ Create a model object where you will maintain an arraylist of any objects which 
 ```Java
     // This contains your array data. Row info should extend the abstarct class RapidRowData. 
     // Row ID's like BR.row1, BR.row2 etc will be dynamically created while build time. Clean and build if not available.
-    public ArrayList<RapidRowData> arrayList = new ArrayList<>();
+    public ArrayList arrayList = new ArrayList<>();
     // This is used to map Row ID's and Row layouts
-    public HashMap<Integer, Integer> layoutsHashMap = new HashMap<>();
+    public HashMap<Class, RowInfo> layoutsHashMap = new HashMap<>();
     // You can change the orientation and layouts(As usual like Recyclerview)
     public RecyclerView.LayoutManager linearLayoutManager;
 ```
