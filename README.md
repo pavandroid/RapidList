@@ -29,14 +29,14 @@ Add it in your root build.gradle at the end of repositories:
 	allprojects {
 		repositories {
 			...
-			maven { url 'https://jitpack.io' }
+			maven { url 'https://dl.bintray.com/vinayyam/RapidList' }
 		}
 	}
 ```
 Add the dependency
 ```
 	dependencies {
-	        implementation 'com.github.pavandroid:RapidList:master-SNAPSHOT'
+	       implementation 'com.uvr.rapidlistlibrary:rapidlistlibrary:1.0.0@aar'
 	}
 ```
 
